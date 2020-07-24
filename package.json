@@ -1,5 +1,5 @@
 {
-  "name": "devops-markdown-text-control",
+  "name": "devops-markdown-control",
   "version": "0.0.0-development",
   "author": "Ricardo Zambon",
   "scripts": {
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/RicardoZambon/devops-markdown-text-control.git"
+    "url": "https://github.com/MarkZither/devops-markdown-control.git"
   },
   "dependencies": {
     "@types/jquery": "^3.5.0",
@@ -87,8 +87,8 @@
             ],
             {
               "path": "*.vsix",
-              "name": "devops-markdown-text-control-${nextRelease.gitTag}.vsix",
-              "label": "DevOps Markdown Text Control ${nextRelease.gitTag}"
+              "name": "devops-markdown-control-${nextRelease.gitTag}.vsix",
+              "label": "DevOps Markdown Control ${nextRelease.gitTag}"
             }
           ]
         }
