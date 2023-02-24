@@ -5,6 +5,7 @@
   "scripts": {
     "build": "tsc",
     "publish": "npm run build && tfx extension create",
+    "serve-dev": "npx http-server ./ -p 44300 -a 127.0.0.1 -S -C .\\cert.pem -K key.pem -c-1",
     "semantic-release": "semantic-release",
     "cz": "git-cz"
   },
