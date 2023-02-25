@@ -1,7 +1,7 @@
 {
   "name": "devops-markdown-control",
   "version": "0.0.0-development",
-  "author": "Ricardo Zambon",
+  "author": "Mark Burton",
   "scripts": {
     "build": "tsc",
     "publish": "npm run build && tfx extension create",
