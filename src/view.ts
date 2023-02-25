@@ -27,13 +27,6 @@ export class View {
         var control = $('<div />');
         control.addClass('control');
 
-        var workItemControl = $('<div />');
-        workItemControl.addClass('work-item-control');
-
-        this._combo = $('<div />');
-        this._combo.addClass('combo');
-        this._combo.addClass('input-text-box');
-
         var wrap = $("<div />");
         wrap.addClass("wrap");
 
@@ -56,8 +49,6 @@ export class View {
 
         wrap.append(field);
         this._combo.append(wrap);
-        workItemControl.append(this._combo);
-        control.append(workItemControl);
         control.append(this._markdown);
         container.append(control);
         $("body").append(container);

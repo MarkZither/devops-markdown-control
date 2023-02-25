@@ -17,11 +17,6 @@ define(["require", "exports", "./markdown"], function (require, exports, markdow
             container.addClass("container");
             var control = $('<div />');
             control.addClass('control');
-            var workItemControl = $('<div />');
-            workItemControl.addClass('work-item-control');
-            this._combo = $('<div />');
-            this._combo.addClass('combo');
-            this._combo.addClass('input-text-box');
             var wrap = $("<div />");
             wrap.addClass("wrap");
             this.currentValue = String(this.model.getCurrentValue());
@@ -40,8 +35,6 @@ define(["require", "exports", "./markdown"], function (require, exports, markdow
             this._markdown.addClass('markdown-control');
             wrap.append(field);
             this._combo.append(wrap);
-            workItemControl.append(this._combo);
-            control.append(workItemControl);
             control.append(this._markdown);
             container.append(control);
             $("body").append(container);
