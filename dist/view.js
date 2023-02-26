@@ -62,10 +62,14 @@ define(["require", "exports", "./markdown"], function (require, exports, markdow
         update(value, markdown) {
             this.currentValue = String(value);
             $("input").val(this.currentValue);
+            console.log("markdown is: " + markdown);
             this._md.markdown(markdown).then(x => {
+                console.log("x is: " + x);
                 var formatted = $(x);
+                console.log("html is: " + formatted.html());
                 $('a', formatted).attr('target', '_blank');
-                this._markdown.html(formatted.html());
+                console.log("html after attr is: " + formatted.html());
+                this._markdown.html(x);
             });
         }
     }

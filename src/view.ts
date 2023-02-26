@@ -83,12 +83,13 @@ export class View {
     public update(value: string, markdown: string) {
         this.currentValue = String(value);
         $("input").val(this.currentValue);
-
+        console.log("markdown is: " + markdown);
         this._md.markdown(markdown).then(x => { 
-            
+            console.log("x is: " + x);
             var formatted = $(x);
+            console.log("html is: " + formatted.html());
             $('a', formatted).attr('target', '_blank');
-
+            console.log("html after attr is: " + formatted.html());
             this._markdown.html(formatted.html());
         });
     }

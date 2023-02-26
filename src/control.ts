@@ -26,6 +26,7 @@ export class Controller {
         this._fieldName = this._inputs["FieldName"];
         this._markdown = this._inputs["Markdown"];
         this._script = this._inputs["Script"];
+        console.log("markdown is: " + this._markdown);
 
         WitService.WorkItemFormService.getService().then(
             (service) => {

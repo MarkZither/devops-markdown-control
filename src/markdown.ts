@@ -18,7 +18,7 @@ export class Markdown {
         if (!str) {
             return str;
         }
-    
+        console.log("str is: " + str);
         const fieldValueRegex = /\${@fieldValue=\w[\w\s\d]*\w}/gi;
         const matches = str.match(fieldValueRegex);
         if (matches && matches.length > 0) {
@@ -31,7 +31,8 @@ export class Markdown {
                         .trim();
 
                     const fieldValue = await this.getFieldValue(fieldName)
-                    
+                    console.log("fieldName is: " + fieldName);
+                    console.log("fieldValue is: " + fieldValue);
                     if (this._func) {
                         return this._func(fieldName, fieldValue);
                     } else {
@@ -75,6 +76,7 @@ export class Markdown {
 
     public async markdown(markdown: string) : Promise<string> {
         const translatedText = await this.processString(markdown);
+        console.log("translatedText is: " + translatedText);
         return this._md.render(translatedText);
     }
 }

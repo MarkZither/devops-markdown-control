@@ -24,6 +24,7 @@ define(["require", "exports", "markdown-it", "TFS/WorkItemTracking/Services"], f
                 if (!str) {
                     return str;
                 }
+                console.log("str is: " + str);
                 const fieldValueRegex = /\${@fieldValue=\w[\w\s\d]*\w}/gi;
                 const matches = str.match(fieldValueRegex);
                 if (matches && matches.length > 0) {
@@ -34,6 +35,8 @@ define(["require", "exports", "markdown-it", "TFS/WorkItemTracking/Services"], f
                             .replace("}", "")
                             .trim();
                         const fieldValue = yield this.getFieldValue(fieldName);
+                        console.log("fieldName is: " + fieldName);
+                        console.log("fieldValue is: " + fieldValue);
                         if (this._func) {
                             return this._func(fieldName, fieldValue);
                         }
@@ -77,6 +80,7 @@ define(["require", "exports", "markdown-it", "TFS/WorkItemTracking/Services"], f
         markdown(markdown) {
             return __awaiter(this, void 0, void 0, function* () {
                 const translatedText = yield this.processString(markdown);
+                console.log("translatedText is: " + translatedText);
                 return this._md.render(translatedText);
             });
         }
