@@ -9,7 +9,9 @@ input, select, textarea, button {
 }
 
 .work-item-control {
-    display: none;
+    width: 10%;
+    padding-left: 1px;
+    padding-right: 3px;
 }
 
 .combo {

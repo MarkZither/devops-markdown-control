@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "devops-simple-markdown-control",
     "publisher": "MarkZither",
-    "version": "1.0.2",
+    "version": "1.0.7",
     "name": "Markdown Text Control",
     "description": "Extension to show markdown",
     "public": true,
