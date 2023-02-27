@@ -2,33 +2,50 @@
   "name": "devops-markdown-control",
   "version": "0.0.0-development",
   "author": "Mark Burton",
+  "directories": {
+    "test": "tests"
+  },
   "scripts": {
     "build": "tsc",
     "publish": "npm run build && tfx extension create",
     "serve-dev": "npx http-server ./ -p 44300 -a 127.0.0.1 -S -C .\\cert.pem -K key.pem -c-1",
     "semantic-release": "semantic-release",
-    "cz": "git-cz"
+    "cz": "git-cz",
+    "testjest": "jest",
+    "test": "mocha 'tests/**/*.ts'",
+    "coverage": "nyc ./node_modules/.bin/_mocha 'tests/**/*.ts'"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/MarkZither/devops-markdown-control.git"
   },
   "dependencies": {
+    "@testdeck/mocha": "^0.3.3",
     "@types/jquery": "^3.5.16",
     "@types/q": "^1.5.5",
+    "chai": "^4.3.7",
     "markdown-it": "^13.0.1",
+    "mocha": "^10.2.0",
+    "ts-mockito": "^2.6.1",
     "vss-web-extension-sdk": "^5.141.0"
   },
   "devDependencies": {
     "@google/semantic-release-replace-plugin": "^1.2.0",
+    "@istanbuljs/nyc-config-typescript": "^1.0.2",
     "@semantic-release/changelog": "^6.0.2",
     "@semantic-release/commit-analyzer": "^9.0.2",
     "@semantic-release/exec": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/github": "^8.0.7",
     "@semantic-release/release-notes-generator": "^10.0.3",
+    "@types/jest": "^29.4.0",
     "cz-conventional-changelog": "^3.3.0",
+    "jest": "^29.4.3",
+    "nyc": "^15.1.0",
     "semantic-release": "^20.1.0",
+    "source-map-support": "^0.5.21",
+    "ts-jest": "^29.0.5",
+    "ts-node": "^10.9.1",
     "typescript": "^4.9.5"
   },
   "config": {
@@ -64,14 +81,14 @@
           ]
         }
       ],
-			[
-				"@semantic-release/git",
-				{
-					"assets": [
-						"vss-extension.json"
-					]
-				}
-			],
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "vss-extension.json"
+          ]
+        }
+      ],
       [
         "@semantic-release/exec",
         {

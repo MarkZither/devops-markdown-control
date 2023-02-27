@@ -351,3 +351,4 @@ MigrationBackup/
 
 # My exclusions
 *.vsix
+.nyc_output/
