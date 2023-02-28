@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "devops-simple-markdown-control",
     "publisher": "MarkZither",
-    "version": "1.0.7",
+    "version": "1.0.13",
     "name": "Markdown Text Control",
     "description": "Extension to show markdown",
     "public": true,
@@ -52,7 +52,7 @@
                         "name": "Field",
                         "type": "WorkItemField",
                         "properties": {
-                            "workItemFieldTypes": ["String"]
+                            "workItemFieldTypes": ["String", "html"]
                         },
                         "validation": {
                             "dataType": "String",

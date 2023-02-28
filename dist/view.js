@@ -69,7 +69,7 @@ define(["require", "exports", "./markdown"], function (require, exports, markdow
                 console.log("html is: " + formatted.html());
                 $('a', formatted).attr('target', '_blank');
                 console.log("html after attr is: " + formatted.html());
-                this._markdown.html(x);
+                this._markdown.html(formatted.html());
             });
         }
     }
