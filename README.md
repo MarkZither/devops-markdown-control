@@ -6,6 +6,8 @@ Azure DevOps extension to show text field control and markdown in same row.
 
 [Learn how to build your own custom control for the work item form.](https://www.visualstudio.com/en-us/docs/integrate/extensions/develop/custom-control)
 
+[DevOps Extension API documentation](https://learn.microsoft.com/en-us/javascript/api/azure-devops-extension-api/fieldtype?view=azdevops-ext-latest)
+
 [More info about developing your own custom web extensions for Azure DevOps Services](https://docs.microsoft.com/en-us/azure/devops/extend/get-started/node?view=azure-devops)
 
 <img src="./static/images/Example.png" style="border: 1px solid black;" /> 
