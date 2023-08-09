@@ -30,7 +30,7 @@
     "vss-web-extension-sdk": "^5.141.0"
   },
   "devDependencies": {
-    "@google/semantic-release-replace-plugin": "^1.2.0",
+    "@google/semantic-release-replace-plugin": "1.2.7",
     "@istanbuljs/nyc-config-typescript": "^1.0.2",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/commit-analyzer": "^9.0.2",
